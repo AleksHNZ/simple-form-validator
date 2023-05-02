@@ -1,0 +1,206 @@
+/* - Mobile: 375px
+- Desktop: 1440px
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/* Basic requirements */
+:root {
+    --red: hsl(0, 100%, 74%); 
+    --green: hsl(154, 59%, 51%);
+    
+    /* ### Accent */
+    
+    --blue: hsl(248, 32%, 49%);
+    
+    /* ### Neutral */
+    
+    --dark-blue: hsl(249, 10%, 26%);
+    --grayish-blue: hsl(246, 25%, 77%);
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box
+}
+
+body{
+    min-height:100vh;
+    background-color: hsl(257,40%,49%);
+    font-family:'Open Sans',sans-serif
+}
+.container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    max-width:1320px;
+    margin:0 auto;
+    
+}
+.wrapper {
+    font-family: 'Poppins', sans-serif;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 2rem;
+    flex-wrap: wrap;
+    width: 80%;
+    max-width: 1000px;
+    background-color: #f2f2f2;
+    padding: 50px;
+    border-radius: 10px;
+    background:url("/images/bg-intro-desktop.png");
+    background-color: var(--red);
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+} 
+
+  /* Style for blocks */
+  .left-block,
+  .right-block {
+      width: 45%;
+  }
+  
+  
+  /* Text style */
+  h1 {
+      margin: 7rem 0 20px;
+      color: #fff;
+      font-family:'Open Sans',sans-serif;
+      font-size: 2.3rem;
+      font-weight: 700px;
+  }
+  
+  p {
+      font: 400 14px/1.5 sans-serif;
+      margin-bottom: 30px;
+      color: #fff;
+  }
+
+  .header-link {
+    margin-top: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--blue);
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    padding: 15px 0 15px 5rem;
+    font-weight: 500;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+  }
+  
+  /* Input's styles */
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  
+  input {
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: none;
+      background-color: #f9f9f9;
+      font-size: 1rem;
+
+  }
+
+
+  input[type="text"]
+  {
+    font-family:'Open Sans',sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  input[type="email"]
+  {
+    font-family:'Open Sans',sans-serif;
+    font-weight: 600;
+  }
+
+  input[type="password"]
+  {
+    font-family:'Open Sans',sans-serif;
+    font-weight: 600;
+  }
+
+  input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #0062cc;
+  }
+
+
+  ::-webkit-input-placeholder {
+    font-family:'Open Sans',sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--grayish-blue);
+  }
+
+
+  /* Style for button */
+  .submit-button{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--green);
+    color: #fff;
+    font-size: 0.9rem;
+    cursor: pointer;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-family:'Open Sans',sans-serif;
+    font-weight: 600;
+  }
+  
+  /* Style for terms */
+  .terms {
+    font-size: 0.8rem;
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  /* Style for span in terms */
+  .terms span {
+    color: rgb(214, 29, 29)
+    ;
+    cursor: pointer;
+  }
+
+
+  /* Стили для мобильных устройств */
+@media only screen and (max-width: 767px) {
+
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-block, .right-block {
+    width: 100%;
+  }
+
+  #name, #last-name, #email, #password {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .terms {
+    font-size: 12px;
+    text-align: center;
+  }
+
+}
